@@ -9,6 +9,9 @@ export default function bindRoutes(app) {
   const RoutesController = initRoutesController(db);
   const TripsController = initTripsController(db);
 
-  app.get('/routes', RoutesController.index);
-  app.get('/trips', TripsController.index);
+  app.get('/getroutes', RoutesController.getRoutes);
+  app.get('/gettrips', TripsController.getTrips);
+  app.get('/routes/:id', RoutesController.getTripRoutes);
+  app.post('/addRoute', RoutesController.addRoute);
+  app.post('/addDifficulty', RoutesController.addDifficulty);
 }
