@@ -27,7 +27,6 @@ app.use(cors({
 }));
 // Bind route definitions to the Express application
 bindRoutes(app);
-
 // Set Express to listen on the given port
 const PORT = process.env.PORT || 3004;
 app.listen(PORT);
